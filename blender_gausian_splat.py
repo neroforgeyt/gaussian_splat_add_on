@@ -690,7 +690,7 @@ class GSplatProperties(PropertyGroup):
     export_lichtfeld: BoolProperty(
         name="Export to LichtFeld Studio",
         description="Automatically launch LichtFeld Studio and start training once the COLMAP export is complete",
-        default=True,
+        default=False,
     )
     lichtfeld_path: StringProperty(
         name="LichtFeld Executable",
