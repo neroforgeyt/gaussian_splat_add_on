@@ -1,0 +1,16 @@
+schema_version = "1.0.0"
+
+id = "gaussian_splat_generator"
+version = "2.0.0"
+name = "Gaussian Splat Generator"
+tagline = "Generate COLMAP exports and Gaussian Splats from a Blender scene"
+maintainer = "NeroForge <neroforgeyt@gmail.com>"
+type = "add-on"
+
+website = "https://github.com/neroforgeyt/gaussian_splat_add_on"
+
+blender_version_min = "5.1.0"
+
+license = [
+  "SPDX:GPL-3.0-or-later",
+]
