@@ -1,4 +1,4 @@
-# Gaussian Splat Generator — Blender Extension
+# Gaussian Splat Generator — Blender Add On
 
 A Blender extension that automatically distributes cameras across a sphere, renders them, and exports a COLMAP-compatible dataset ready for 3D Gaussian Splatting training.
 
