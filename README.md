@@ -1,6 +1,6 @@
 # Gaussian Splat Generator — Blender Add On
 
-A Blender extension that automatically distributes cameras across a sphere, renders them, and exports a COLMAP-compatible dataset ready for 3D Gaussian Splatting training.
+A Blender add on that automatically distributes cameras across a sphere, renders them, and exports a COLMAP-compatible dataset ready for 3D Gaussian Splatting training.
 
 ---
 
@@ -12,7 +12,12 @@ A Blender extension that automatically distributes cameras across a sphere, rend
 ---
 
 ## Installation
+**Option 1: **
+1. Download the `.zip` file in this repository
+2. Click the dropdown in the top-right corner and choose **Install from Disk**
+3. Select the generated `.zip` file
 
+**Option 2:**
 1. Download or clone this repository
 2. Build the extension `.zip` from the repository root:
    ```
