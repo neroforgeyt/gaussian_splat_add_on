@@ -12,6 +12,8 @@ A Blender add on that automatically distributes cameras across a sphere, renders
 ---
 
 ## Installation
+Video tutorial: https://www.youtube.com/watch?v=CTj1L6vr9-k&t=574s
+
 **Option 1: **
 1. Download the `.zip` file in this repository
 2. Click the dropdown in the top-right corner and choose **Install from Disk**
