@@ -77,6 +77,8 @@ _state = {
     "original_film_transparent": False,
     "original_color_mode":       "RGB",
     "original_lens":             50.0,
+    "original_use_sequencer":    True,
+    "original_use_compositing":  True,
     # Blender objects created by us
     "camera_obj":  None,
     "camera_data": None,
@@ -108,6 +110,8 @@ def _cleanup():
     scene.render.filepath = _state["original_output"]
     scene.render.film_transparent = _state["original_film_transparent"]
     scene.render.image_settings.color_mode = _state["original_color_mode"]
+    scene.render.use_sequencer   = _state["original_use_sequencer"]
+    scene.render.use_compositing = _state["original_use_compositing"]
 
     if _state["original_world"] is not None:
         scene.world = _state["original_world"]
@@ -837,6 +841,8 @@ class GSPLAT_OT_render(Operator):
         _state["original_world"]            = None
         _state["original_film_transparent"] = context.scene.render.film_transparent
         _state["original_color_mode"]       = context.scene.render.image_settings.color_mode
+        _state["original_use_sequencer"]    = context.scene.render.use_sequencer
+        _state["original_use_compositing"]  = context.scene.render.use_compositing
 
         if props.show_all_cameras:
             props.show_all_cameras = False
@@ -850,6 +856,9 @@ class GSPLAT_OT_render(Operator):
         if props.transparent_background:
             context.scene.render.film_transparent = True
             context.scene.render.image_settings.color_mode = "RGBA"
+            
+        context.scene.render.use_sequencer   = False
+        context.scene.render.use_compositing = False
 
         # Create output dirs
         os.makedirs(os.path.join(output_dir, "images"), exist_ok=True)
